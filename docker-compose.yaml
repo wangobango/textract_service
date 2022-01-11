@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  service-name:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        tag: textract
+    image: textract:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ~/.aws/:/root/.aws:ro
