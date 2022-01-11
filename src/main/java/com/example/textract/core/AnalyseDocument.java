@@ -43,13 +43,8 @@ public class AnalyseDocument {
                 .build();
 
         AnalyzeDocumentResponse analyzeDocument = textractClient.analyzeDocument(analyzeDocumentRequest);
-        List<Block> docInfo = analyzeDocument.blocks();
 
-        for (Block block : docInfo) {
-            System.out.println("The block type is " + block.blockType().toString());
-        }
-
-        return docInfo;
+        return analyzeDocument.blocks();
 
     }
 
