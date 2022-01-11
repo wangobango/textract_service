@@ -1,0 +1,8 @@
+#cloud-config
+packages:
+  - git
+  - docker
+  - docker-compose
+runcmd:
+  - git clone https://github.com/wangobango/textract_service.git
+  - cd textract_service && docker-compose up -d
