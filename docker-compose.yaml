@@ -9,6 +9,6 @@ services:
         tag: textract
     image: textract:latest
     ports:
-      - "8080:8080"
+      - "0.0.0.0:8080:8080"
     volumes:
       - ~/.aws/:/root/.aws:ro
