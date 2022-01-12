@@ -3,6 +3,7 @@ packages:
   - git
   - docker
   - docker-compose
+  - maven
 runcmd:
   - git clone https://github.com/wangobango/textract_service.git
-  - cd textract_service && docker-compose up -d
+  - cd textract_service && maven install && docker-compose up -d
